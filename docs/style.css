@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  background-color: #ece6dc;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .gameContainer header {
+  display: flex;
+  align-items: start;
+  min-width: 45vw;
+}
+body .gameContainer header .title {
+  color: #867b72;
+  font-weight: bold;
+}
+body .gameContainer header .title h1 {
+  font-size: 3rem;
+}
+body .gameContainer header .title span {
+  font-size: 1.2rem;
+}
+body .gameContainer header .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: auto;
+}
+body .gameContainer header .info > * {
+  background-color: #a08f7c;
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+body .gameContainer .board {
+  margin-top: 2rem;
+  width: 70vh;
+  height: 70vh;
+  background-color: #bbada0;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+body .gameContainer .board .slots {
+  grid-area: 1/1;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+body .gameContainer .board .slots .slot {
+  background-color: rgba(238, 228, 218, 0.3490196078);
+  border-radius: 6px;
+}
+body .gameContainer .board .tiles {
+  grid-area: 1/1;
+  position: relative;
+}
+body .gameContainer .board .tiles .tile {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background-color: #eee4da;
+  color: #776e65;
+  font-size: 3rem;
+  font-weight: 600;
+}
+body .gameOverContainer,
+body .winContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+body .gameOverContainer .gameOver,
+body .winContainer .win {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #776e65;
+}
+body .newGameButton {
+  color: #ffffff;
+  padding: 0.7rem 1.7rem;
+  font-size: 1.1rem;
+  border-radius: 0.4rem;
+  background-color: #867b72;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+body .newGameButton:hover {
+  filter: brightness(90%);
+}
+body .hide {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

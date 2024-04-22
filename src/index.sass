@@ -1,0 +1,109 @@
+body
+  margin: 0
+  background-color: #ece6dc
+  font-family: 'Poppins', sans-serif
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100vh
+
+  .gameContainer
+    header
+      display: flex
+      align-items: start
+      min-width: 45vw
+
+      .title
+        color: #867b72
+        font-weight: bold
+
+        h1
+          font-size: 3rem
+
+        span
+          font-size: 1.2rem
+
+      .info
+        display: flex
+        flex-direction: column
+        gap: 1rem
+        margin-left: auto
+
+        > *
+          background-color: #a08f7c
+          color: #fff
+          padding: .5rem 1.2rem
+          font-weight: bold
+          font-size: 1rem
+          border: none
+          border-radius: .5rem
+          text-align: center
+
+    .board
+      margin-top: 2rem
+      width: 70vh
+      height: 70vh
+      background-color: #bbada0
+      border-radius: 8px
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr
+
+      .slots
+        grid-area: 1/1
+        display: grid
+        grid-template-rows: repeat(4, 1fr)
+        grid-template-columns: repeat(4, 1fr)
+        gap: 15px
+        padding: 15px
+
+        .slot
+          background-color: #eee4da59
+          border-radius: 6px
+
+      .tiles
+        grid-area: 1/1
+        position: relative
+
+        .tile
+          position: absolute
+          display: grid
+          place-items: center
+          border-radius: 6px
+          background-color: #eee4da
+          color: #776e65
+          font-size: 3rem
+          font-weight: 600
+
+  .gameOverContainer,
+  .winContainer
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: .5rem
+
+  .gameOverContainer .gameOver,
+  .winContainer .win
+    font-size: 3.5rem
+    font-weight: 600
+    color: #776e65
+
+  .newGameButton
+    color: #ffffff
+    padding: .7rem 1.7rem
+    font-size: 1.1rem
+    border-radius: .4rem
+    background-color: #867b72
+    border: none
+    outline: none
+    cursor: pointer
+    transition: .1s
+
+  .newGameButton:hover
+    filter: brightness(90%)
+
+  .hide
+    display: none
